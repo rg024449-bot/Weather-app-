@@ -1,6 +1,8 @@
 # Weather pattern analysis
 import numpy as np
 import pandas as pd
+import matplotlib
+matplotlib.use('Agg')  # Set backend before importing pyplot
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -63,3 +65,4 @@ print(f"Highest average rainfall month: {monthly_avg['Rainfall'].idxmax()}")
 print(f"Lowest average temperature month: {monthly_avg['Temperature'].idxmin()}")
 print("Correlation between temperature and humidity:")
 print(df[['Temperature', 'Humidity']].corr())
+
